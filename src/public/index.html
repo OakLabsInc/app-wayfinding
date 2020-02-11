@@ -1,8 +1,19 @@
 <DOCTYPE html>
-<html style="margin:0px;overflow:hidden">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>NRF_2020_wayfind_v4.8</title>
+<style type="text/css">
+	html, body {
+		margin: 0;
+		padding: 0;
+		overflow: hidden !important; 
+	}
+	::-webkit-scrollbar {
+		display: none;
+	}
+    
+  </style>
 <script src="js/createjs.min.js"></script>
 <script src="js/index.js"></script>
 <script src ="jquery/jquery-3.4.1.js"></script>
@@ -51,7 +62,7 @@ function handleComplete(evt,comp) {
 </script>
 <!-- write your code here -->
 </head>
-<body onload="init();" style="margin:0px;overflow:hidden">
+<body onload="init();">
 	<div id="animation_container" style="background-color:rgba(53, 53, 53, 1.00); width:1080px; height:1920px">
 		<canvas id="canvas" width="1080" height="1920" style="position: absolute; display: block; background-color:rgba(53, 53, 53, 1.00);"></canvas>
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1080px; height:1920px; position: absolute; left: 0px; top: 0px; display: block;">
