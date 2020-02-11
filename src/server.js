@@ -42,6 +42,7 @@ async function loadWindow () {
     ontop: false,
     insecure: true,
     flags: ['enable-vp8-alpha-playback'],
+    size: "1080x1920",
     sslExceptions: ['localhost'],
     background: '#ffffff'
   })
@@ -49,8 +50,10 @@ async function loadWindow () {
       if (debug) {
         window.debug()
       }
+      window.insertCSS('html,body{ overflow: hidden !important; }');
     })
     .on('log.*', function (props) {
       logger[this.event.replace('log.', '')](props)
     })
+  
 }
