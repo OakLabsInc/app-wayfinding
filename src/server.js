@@ -1,6 +1,6 @@
 
 const debug = process.env.NODE_ENV !== 'production'
-
+const fs = require('fs')
 const oak = require('oak')
 const { join } = require('path')
 const _ = require('lodash')
@@ -63,7 +63,7 @@ async function loadWindow () {
       logger.info({
         message: `did-finish-load called`
       })
-      window.instance.webContents.insertCSS('html,body{ overflow: hidden !important; }');
+      window.instance.webContents.insertCSS(fs.readFileSync(join(__dirname, 'scrollbars.css'), 'utf8'));
     })
   
 }

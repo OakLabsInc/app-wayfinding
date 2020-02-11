@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "express": "~4.17.1",
+    "fs": "0.0.1-security",
     "lodash": "~4.17.10",
     "oak-tools": "~0.5.7",
     "serve-index": "~1.9.1",
