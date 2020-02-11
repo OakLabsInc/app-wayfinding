@@ -44,13 +44,16 @@ async function loadWindow () {
     flags: ['enable-vp8-alpha-playback'],
     size: "1080x1920",
     sslExceptions: ['localhost'],
-    background: '#000000'
+    background: '#ffffff'
   })
     .on('ready', function () {
       if (debug) {
         window.debug()
       }
-      window.insertCSS('html,body{ overflow: hidden !important; }');
+      logger.info({
+        message: `oak ready called`
+      })
+      window.instance.webContents.insertCSS('html,body{ overflow: hidden !important; }');
     })
     .on('log.*', function (props) {
       logger[this.event.replace('log.', '')](props)
