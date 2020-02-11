@@ -53,10 +53,17 @@ async function loadWindow () {
       logger.info({
         message: `oak ready called`
       })
-      window.instance.webContents.insertCSS('html,body{ overflow: hidden !important; }');
+      //window.instance.webContents.insertCSS('html,body{ overflow: hidden !important; }');
     })
     .on('log.*', function (props) {
       logger[this.event.replace('log.', '')](props)
+    })
+
+    window.instance.webContents.on('did-finish-load', function () {
+      logger.info({
+        message: `did-finish-load called`
+      })
+      window.instance.webContents.insertCSS('html,body{ overflow: hidden !important; }');
     })
   
 }
