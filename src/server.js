@@ -44,7 +44,7 @@ async function loadWindow () {
     flags: ['enable-vp8-alpha-playback'],
     size: "1080x1920",
     sslExceptions: ['localhost'],
-    background: '#ffffff'
+    background: '#000000'
   })
     .on('ready', function () {
       if (debug) {
