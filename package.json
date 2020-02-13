@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/OakLabsInc/app-wayfinding#readme",
   "devDependencies": {
-    "oak": "~5.0.0"
+    "oak": "~5.0.9"
   },
   "dependencies": {
     "express": "~4.17.1"
